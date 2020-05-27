@@ -15,6 +15,10 @@
 
 @implementation RCTSelectContact
 
+- (dispatch_queue_t)methodQueue {
+  return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_MODULE(SelectContact);
 
 RCT_EXPORT_METHOD(openContactSelection:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
